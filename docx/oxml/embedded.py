@@ -22,7 +22,7 @@ class CT_EmbeddedObject(BaseOxmlElement):
 
 class CT_OLEObject(BaseOxmlElement):
     rId = RequiredAttribute('r:id', ST_RelationshipId)
-    progId = RequiredAttribute('ProgId', ST_String)
+    progId = RequiredAttribute('ProgID', ST_String)
     shapeID = RequiredAttribute('ShapeID', ST_String)
     type_ = RequiredAttribute('Type', ST_OLEType)
     objectID = RequiredAttribute('ObjectID', ST_String)
