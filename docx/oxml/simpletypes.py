@@ -407,3 +407,17 @@ class ST_VerticalAlignRun(XsdStringEnumeration):
     SUBSCRIPT = 'subscript'
 
     _members = (BASELINE, SUPERSCRIPT, SUBSCRIPT)
+
+
+class ST_OLEType(XsdStringEnumeration):
+    """
+     Embed 	0 	Embedded Object.
+                When the item is serialized out as xml,
+                its value is "Embed".
+    Link 	1 	Linked Object.
+                When the item is serialized out as xml,
+                its value is "Link".
+    """
+    Embed = 'Embed'
+    Linked = 'Linked'
+    _members = (Embed, Linked)

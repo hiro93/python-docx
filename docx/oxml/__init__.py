@@ -246,3 +246,17 @@ from .text.run import CT_Br, CT_R, CT_Text  # noqa
 register_element_cls('w:br', CT_Br)
 register_element_cls('w:r',  CT_R)
 register_element_cls('w:t',  CT_Text)
+
+
+from .embedded import (  # noqa
+    CT_EmbeddedObject,
+    CT_OLEObject,
+    CT_VML_Shape,
+    CT_VML_ImageData,
+    CT_Drawing,
+)
+register_element_cls('w:object', CT_EmbeddedObject)
+register_element_cls('o:OLEObject', CT_OLEObject)
+register_element_cls('v:shape', CT_VML_Shape)
+register_element_cls('v:imagedata', CT_VML_ImageData)
+register_element_cls('w:drawing', CT_Drawing)
