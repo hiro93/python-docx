@@ -39,5 +39,32 @@ class CT_VML_ImageData(BaseOxmlElement):
 
 
 class CT_Drawing(BaseOxmlElement):
+    """
+    This element specifies that a DrawingML object is located at this position
+    in the run’s contents. The layout properties of this DrawingML object
+    are specified using the WordprocessingML Drawing syntax (§20.4).
+    """
     # TODO: not support ``wp:anchor`` currently
     inline = OneAndOnlyOne('wp:inline')
+
+
+    @property
+    def cx(self):
+        try:
+            return self.inline.extent.cx
+        except KeyError:
+            return 0
+
+    @property
+    def cy(self):
+        try:
+            return self.inline.extent.cy
+        except KeyError:
+            return 0
+
+    @property
+    def embed(self):
+        try:
+            return self.inline.graphic.graphicData.pic.blipFill.blip.embed
+        except KeyError:
+            return ''
