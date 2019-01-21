@@ -17,8 +17,8 @@ class Wmf(BaseImageHeader):
         w = reader.read_short(0, 4)
         h = reader.read_short(0, 6)
         inch = reader.read_short(0, 8)
-        print(f'x={x}, y={y}, w={w}, h={h}, inch={inch}')
-        return cls(100, 100, 100, 100)
+        # print('x={x}, y={y}, w={w}, h={h}, inch={inch}'.format(x=x, y=y, w=w, h=h, inch=inch))
+        return cls(x, y, 100, 100)
 
     @property
     def default_ext(self):
