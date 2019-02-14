@@ -18,6 +18,7 @@ class CT_EmbeddedObject(BaseOxmlElement):
     dyaOrig = RequiredAttribute('w:dyaOrig', ST_TwipsMeasure)
 
     oleObject = ZeroOrOne('o:OLEObject')
+    shape = ZeroOrOne('v:shape')
 
 
 class CT_OLEObject(BaseOxmlElement):
